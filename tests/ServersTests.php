@@ -13,7 +13,7 @@ class ServersTests extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $baseUrl = ($h = getenv('MAILOSAUR_BASE_URL')) ? $h : 'https://mailosaur.com';
+        $baseUrl = ($h = getenv('MAILOSAUR_BASE_URL')) ? $h : 'https://mailosaur.com/';
         $apiKey  = getenv('MAILOSAUR_API_KEY');
 
         if (empty($apiKey)) {
