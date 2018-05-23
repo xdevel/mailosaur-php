@@ -1,16 +1,14 @@
 language: php
 php:
-  - '5.6'
-  - '7.0'
-  - '7.1'
-
-script: phpunit
-before_install: wget http://getcomposer.org/composer.phar && php composer.phar install
+- '5.3'
+- '5.4'
+- '5.5'
+- '5.6'
+- '7.0'
+- '7.1'
+- '7.2'
+script: vendor/bin/phpunit
+before_install: composer install
 env:
-  global:
-  - secure: "o6b1nDvq5u/CUB6v+koy3hGPA5HfmWNwraSXPOxp76F/jueme8bW9Cmdlq9Bsv80rPe6XDhT8UGrM37ZGmBPcxl5rDEYWk08utjAfdMfXFfIuanmOhtgC3C9uUM9CenYH0wI6seC6FFtetzxdJ6dUjVxHEq2KFoHO/1qSZ5Ub8LccARM8+sYkTFkQq2x9a3xsgUenG49hzN1al5sLVNA3N+nNT2sAn5xH7USwknuZR6yvyD5fdMiiaRjIXreTgDWgTaX9mO9V++eim8UFrv7pp4I3+lLhBUqRQGj+lRGRoCgA9WHCuMpaS/0jT19llORbMhSN71qFXzwRKKpBW1PPg8w+1/rQr2mOSfeMJQpsNaozbYOgrhosCg6SjFP48h43L9xMjztW5FSL+Z0LufgetPWJZMSTkXLNdH/SX4N2ewu2lZAeCmn1HDqQwfJek/NloUsRVKrcOhVLD41A+yHCxfwJaFvB5JBBc9FWsNGESJ3w4HUvixrQxc2EFy01KlZaApaKI8FBaT7lxuoXRfA/yl5YAR1QfWKXHVejk7wz83qHNfNczvsjuenHxfQQOpEVFiJY21/FbIrQBsM+Ar48IyS62mSbPD1GOgp7wf9Ll5dPnTQ3NP72FseTqL8idDIsXU8ZgIbnONc4rs0yQnWOEvWKo5Ojg8feWJ+z792o4Y="
   matrix:
-  - MAILOSAUR_BASE_URL=https://mailosaur.com/api MAILOSAUR_SMTP_HOST=mailosaur.io
-  - MAILOSAUR_BASE_URL=https://next.mailosaur.com/api MAILOSAUR_SMTP_HOST=ms-smtp.uk MAILOSAUR_USE_GENERATE=false
-notifications:
-  slack: mailosaur:CsJ9RruwjqHPKr1Iugk8GDtX
+    secure: Ub4c3ghVirtBTLPFNypqI4u1M7klCcesMsTdYlgYa+u6xnnOKXQvzpx3WsmA/zl71mZSJwuqH1lSKtGFg06GCbfq1P7aOXctnKGRINDY4dpEJqQJHV2qXsL3dCXYeypYNDwfG94bHsGf10FIu8fKdYJviuHpyLOZYO+EpjqfEzwxJJhWCbLyeKhaO1Ot6jlYK7KBAd4IBHrvuqT8hyYGGaqaLkC/8qqRwhftr+15NCWIeHuDCEjp4mclSaSpAaOSZeNrDOR9pVe0xu96ca6MUFS6DJREYwQSWRhJnO0OvwOt047jfdY5CnfmHI/Q/2odiP6iJbR+Go/dfl491+7eXInPlkaN0pVHGwrxewVjljLnlvpj9zhIWlSi+n7tf62htpJ1zIpfrxkLUF4gyS+hcaJ9WNiLmokqDZ/uxdbtHyA61cIPjBjJLf86KaLTNMNO2paQde4y0qx/vwp47PsLMly7cYFugHff+vnqjMCgtdsx3DhawOSHu4u9qqrjcNHGnp412P/0tUSrZySZbYaLPnnxh74CY28SCNuEBVr54HubHN/EpGRVuCcGMjVlGsGSkD5Y2DcBKEsTfdyozozOvV/zDiuWb5vfoimhxfUujDxO31RneKxyOITGj1LfJlLYYj/jE1kXyjvaTySdlTQKxtKEB5XoNmq9SbXPy1t7BWk=
